@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "episilia-fb7bc"
+  },
+  "targets": {
+    "episilia-fb7bc": {
+      "hosting": {
+        "episilia-fb7bc": [
+          "episilia-fb7bc"
+        ],
+        "staging-episilia": [
+          "staging-episilia"
+        ]
+      }
+    }
+  }
+}

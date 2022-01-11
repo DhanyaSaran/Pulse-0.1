@@ -1,0 +1,19 @@
+@import "../../style/variables/colors";
+
+.input-text{
+    font-size: 1rem;
+    font-weight: 200;
+    font-family: 'Poppins', sans-serif;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 7px;
+
+    &:hover{
+      border-color: $primaryColor;
+    }
+    &:focus{
+      border-color: $primaryColor;
+    }
+}
+

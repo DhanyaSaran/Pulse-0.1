@@ -1,0 +1,128 @@
+@import "../../../../components/style/variables/colors";
+
+.login-page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  &__left-section {
+    width: 40%;
+
+    &__header {
+      margin-top: 60px;
+      margin-left: 20%;
+      font-size: 1rem;
+      @media screen and (max-width: 600px) {
+        margin-left: 10%;
+      }
+      &__title {
+        font-size: 1.625rem;
+        font-weight: 600;
+        @media screen and (max-width: 600px) {
+          font-size: 1.688rem;
+        }
+      }
+      &__sub-title {
+        color: #8f8f8f;
+        font-size: 1rem;
+        line-height: 24px;
+        @media only screen and (max-width: 600px) {
+          font-size: 1rem;
+          line-height: 1.375rem;
+        }
+        @media only screen and (min-width: 600px) and (max-width: 1200px) {
+          font-size: 0.8rem;
+          line-height: 1.625rem;
+        }
+      }
+    }
+    &__form {
+      margin-top: 20%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &__form-container {
+        width: 50%;
+        @media screen and (max-width: 600px) {
+          width: 80%;
+        }
+        @media screen and (min-width: 600px) and (max-width: 1200px) {
+          width: 65%;
+        }
+      }
+      &__text-field {
+        min-height: 2.188rem !important;
+        @media screen and (min-width: 600px) and (max-width: 1440px) {
+          width: 100% !important;
+        }
+        @media screen and (min-width: 1920px) {
+          min-height: 3.625rem !important;
+          font-size: 1.2rem !important;
+        }
+      }
+      &__label {
+        align-self: flex-start;
+        font-weight: 600;
+        font-size: 1rem;
+      }
+      &__btn {
+        width: 100%;
+        margin-top: 22px;
+        color: white;
+        background-color: #1dd1a1;
+        border-radius: 5px;
+        min-height: 2.188rem !important;
+        @media screen and (max-width: 600px) {
+          margin-top: 0.938rem !important;
+        }
+        @media screen and (min-width: 600px) and (max-width: 1400px) {
+          margin-top: 1.5rem !important;
+          width: 100% !important;
+        }
+        @media screen and (min-width: 1920px) {
+          min-height: 3.625rem !important;
+          font-size: 1.2rem !important;
+        }
+        &:hover {
+          background: none;
+          border-color: $primaryColor;
+          color: $primaryColor;
+        }
+      }
+      &__na-acc {
+        margin-top: 13%;
+        font-size: 1rem;
+        &__text {
+          color: #8f8f8f;
+        }
+        &__link {
+          padding: 0;
+          font-weight: 600;
+          color: black;
+          @media screen and (max-width: 600px) {
+            margin-top: 1%;
+          }
+        }
+        @media screen and (min-width: 600px) and (max-width: 1200px) {
+          font-size: 0.8rem !important;
+        }
+        @media only screen and (max-width: 600px) {
+          margin-top: 8% !important;
+          font-size: 1rem;
+        }
+      }
+    }
+    @media only screen and (max-width: 600px) {
+      width: 100%;
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .login-page-container {
+    .right-section {
+      display: none;
+    }
+    .left-section {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+image: node:latest
+
+stages:
+    - build
+    - test
+    - deploy
+
+cache:
+    paths:
+    - node_modules/
+
+build_develop:
+    stage: build
+    only: 
+        - develop
+    script:
+        - yarn install
+        - yarn run build:develop
+
+    artifacts:
+        paths:
+            - node_modules/
+            - dist/
+
+build_prod:
+    stage: build
+    only: 
+        - master
+    script:
+        - yarn install
+        - yarn run build:prod
+
+    artifacts:
+        paths:
+            - node_modules/
+            - dist/
+
+deploy_staging:
+    stage: deploy
+    only:
+        - develop
+
+    script:
+        - yarn global add firebase-tools
+        - firebase use episilia-fb7bc --token $FIREBASE_TOKEN
+        - firebase deploy --only hosting:staging-episilia -m "Pipe $CI_PIPELINE_ID Build $CI_BUILD_ID" --token $FIREBASE_TOKEN
+
+deploy_production:
+    stage: deploy
+    only:
+        - master
+
+    script:
+        - yarn global add firebase-tools
+        - firebase use episilia-fb7bc --token $FIREBASE_TOKEN
+        - firebase deploy --only hosting:episilia-fb7bc -m "Pipe $CI_PIPELINE_ID Build $CI_BUILD_ID" --token $FIREBASE_TOKEN

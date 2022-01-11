@@ -1,0 +1,9 @@
+/node_modules
+/dist
+/.cache
+/yarn.lock
+/src/app/Firebase.js
+/.firebase
+/config
+/firebase-debug.log
+/.vscode

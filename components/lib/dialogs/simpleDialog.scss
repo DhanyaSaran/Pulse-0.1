@@ -1,0 +1,95 @@
+@import "../../style/variables/colors";
+
+.dialog {
+
+  &-root {
+
+    .ant-modal-content, .ant-modal-header{
+      border-radius: 5px;
+    }
+
+    .ant-modal-body {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .icon-container {
+      float: right;
+      cursor: pointer;
+    }
+
+    .section {
+
+      &-top {
+        padding: 12px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+  
+      &-bottom {
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+  
+    }
+
+    .success {
+      background: $primaryGradient;
+    }
+
+    .error {
+      background: $secondaryGradient;
+    }
+
+    .default {
+      background:$white;
+    }
+
+    .header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 8px;
+      margin-left: 14px;
+
+      .title {
+        font-family: "Poppins";
+        font-size: 20px;
+        font-weight: 600;
+        margin-top: .5em;
+        text-align: center;
+      }
+
+      .default-dialog-icon {
+        font-size: 40px;
+      }
+    }
+
+    .content {
+      font-family: "Poppins";
+      font-size: 15px;
+      width: 17em;
+      text-align: center;
+    }
+
+    .action {
+      margin-top: 1em;
+      font-size: 16px;
+      color: #000;
+      width: 15em;
+    }
+
+    .btn-error {
+      color: $secondaryColor;
+      border: $secondaryColor 1px solid;
+    }
+
+    .btn-error :hover {
+      outline: $secondaryColor;
+    }
+  }
+}

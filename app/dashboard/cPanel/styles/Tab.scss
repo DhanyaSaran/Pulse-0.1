@@ -1,0 +1,27 @@
+
+.tabs{
+    border: 0ch;
+    justify-content: space-evenly;
+    // margin-right: 15%;
+    // margin-left: 10px;
+    background-color: #fff;
+    width:256px;
+    // border-right: 1px solid #000;
+}
+.Heading
+{
+    flex-direction: row;
+    justify-content: space-evenly;
+    // background-color: aqua;
+}
+
+.tabsSelected{
+    border-left: 0ch;
+    border:0ch;
+    width:256px;
+    border-bottom: 2px solid #41E799;
+    justify-content: space-evenly;
+    //margin-right: 15%;
+    //margin-left: 10px;
+    background-color: #fff;
+}

@@ -1,0 +1,57 @@
+@import "../../../../components/style/variables/colors";
+
+.right-section {
+    width: 60%;
+    background: linear-gradient(138.84deg, #44ec9c 0.55%, #41e799 0.56%, #33c47e 99.29%);
+    border-radius: 8px;
+    &__right-header {
+        &__btn {
+            margin: 3% 0 0 8%;
+            padding: 8px 12px;
+            color: black;
+            border: 1px solid #000000;
+            box-sizing: border-box;
+            border-radius: 7px;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+    }
+    &__container {
+        margin-left: 8%;
+        margin-top: 3%;
+        font-family: "Poppins", sans-serif;
+        &__header-title {
+            font-size: 1.75rem;
+            font-weight: bolder;
+        }
+        &__header-sub-title {
+            color: #636363;
+            font-size: 1rem;
+            font-weight: 400;
+            width: 66%;
+            height: 10vh;
+            @media screen and (min-width: 600px) and (max-width: 1200px) {
+                font-size: 0.9rem;
+            }
+        }
+        &__link {
+            display: flex;
+            flex-direction: row-reverse;
+            margin-right: 5%;
+            text-transform: none;
+            text-decoration: underline;
+            color: #636363;
+        }
+    }
+    &__img-colossal {
+        margin: 5% auto;
+        width: 70%;
+        height: auto;
+        //border: 10px solid white;
+        border-radius: 20px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
